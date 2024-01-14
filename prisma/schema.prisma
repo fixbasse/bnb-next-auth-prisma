@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  email          String    @unique
+  hashedPassword String
+  emailVerified  DateTime?
+  image          String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Listing Listing[]
+}
+
+model Listing {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  category      String
+  roomType      String
+  locationValue String
+
+  guestCount    Int
+  bedroomCount  Int
+  bedCount      Int
+  bathroomCount Int
+
+  imageSrc String
+
+  offer     String
+  amenities String
+  safety    String
+
+  shortDesc   String
+  description String
+
+  confirm  String
+  price    Int
+  hostName String
+
+  startDate DateTime
+  endDate   DateTime
+
+  createdAt DateTime @default(now())
+
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
