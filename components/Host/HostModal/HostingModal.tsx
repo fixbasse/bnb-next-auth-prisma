@@ -203,6 +203,7 @@ const HostingModal = () => {
                 <form className="categoryAnimate grid gap-4 grid-cols-2 md:grid-cols-3 py-4">
                     {categorySelected.map((item) => (
                         <HostCategory
+                            key={item.label}
                             label={item.label}
                             onClick={(category) => {
                                 setCustomValues('category', category)
@@ -249,7 +250,7 @@ const HostingModal = () => {
                 </title>
                 <section>
                     <h1 className="font-semibold text-3xl md:text-4xl pb-2">
-                        Where's your place located?
+                        Where&apos;s your place located?
                     </h1>
 
                     <span className="text-gray-500 text-xl font-light">
@@ -287,7 +288,7 @@ const HostingModal = () => {
                         Share some basics about your place
                     </h1>
                     <span className="text-gray-500 text-xl font-light">
-                        You'll add more details later, like bed types.
+                        You&apos;ll add more details later, like bed types.
                     </span>
                 </section>
 
@@ -345,6 +346,7 @@ const HostingModal = () => {
                 <form className="grid gap-2 grid-cols-2 md:grid-cols-3 py-4">
                     {hostOffer.map((item) => (
                         <HostOffer
+                            key={item.label}
                             label={item.label}
                             onClick={(offer) => {
                                 setCustomValues('offer', offer)
@@ -393,7 +395,7 @@ const HostingModal = () => {
                     Add some photos of your cycladic home
                 </h1>
                 <span className="text-gray-500 text-xl font-light">
-                    You'll need 5 photos to get started. You can add more or make changes later.
+                    You&apos;ll need 5 photos to get started. You can add more or make changes later.
                 </span>
 
                 <form className="pt-8">
@@ -417,7 +419,7 @@ const HostingModal = () => {
                 </title>
                 <section className="pb-8">
                     <h1 className="font-semibold text-3xl md:text-4xl pb-2">
-                        Now, let's give your cycladic home a title
+                        Now, let&apos;s give your cycladic home a title
                     </h1>
 
                     <span className="text-gray-500 text-xl font-light">
@@ -482,10 +484,10 @@ const HostingModal = () => {
         bodyContent = (
             <div className="w-full md:w-[60%]">
                 <title>
-                    Decide how you'll confirm reservations - ActiveBnb
+                    Decide how you&apos;ll confirm reservations - ActiveBnb
                 </title>
                 <h1 className="titleTypeAnimate font-semibold text-3xl md:text-4xl pb-2">
-                    Decide how you'll confirm reservations
+                    Decide how you&apos;ll confirm reservations
                 </h1>
 
                 <HostConfirm

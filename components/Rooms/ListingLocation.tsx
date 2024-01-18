@@ -24,7 +24,7 @@ const ListingLocation = ({
         <div className='py-14 p-4 md:p-0'>
 
             <h1 className='font-semibold text-2xl'>
-                Where you'll be
+                Where you&lsquo;ll be
             </h1>
 
 
@@ -40,7 +40,7 @@ const ListingLocation = ({
                 </h2>
 
                 <p className='font-light'>
-                    It's difficult to know where to start. The region contains some of the most spectacular baroque monasteries and churches in Central Europe (Lambach, Kremsmünster, Schlierbach, St. Florian, Traunkirchen, St. Wolfgang); the Austrian national horse centre (Stadl Paura), which is just 2 miles away; the beautiful historical towns and villages of Salzkammergut (Hallstatt, Bad Ischl, Gmunden, Aussee); the Natura 2000 nature reserve spanning Wimsbach
+                    It&lsquo;s difficult to know where to start. The region contains some of the most spectacular baroque monasteries and churches in Central Europe (Lambach, Kremsmünster, Schlierbach, St. Florian, Traunkirchen, St. Wolfgang); the Austrian national horse centre (Stadl Paura), which is just 2 miles away; the beautiful historical towns and villages of Salzkammergut (Hallstatt, Bad Ischl, Gmunden, Aussee); the Natura 2000 nature reserve spanning Wimsbach
                 </p>
 
                 <div className='flex items-center gap-1'>

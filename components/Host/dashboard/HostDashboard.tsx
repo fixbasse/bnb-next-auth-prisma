@@ -67,7 +67,7 @@ const HostDashboard = ({
                             size={40}
                         />
                         <span className='text-center text-gray-700'>
-                            You don't have any guests
+                            You don&lsquo;t have any guests
                             <br />
                             checking out today
                             <br />

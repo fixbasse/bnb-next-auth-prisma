@@ -74,7 +74,7 @@ const PriceAndFee = ({
                         : 'hidden'}
                         `}>
                     <span className="pb-2 text-center font-light">
-                        You won't be charged yet
+                        You won&apos;t be charged yet
                     </span>
 
                     <section className="flex flex-col gap-2 font-light pb-4">

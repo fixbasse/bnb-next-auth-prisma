@@ -32,10 +32,11 @@ middleware
 <!-- Map -->
 not zoom
 
-<!-- Git Push -->
+<!-- Git Push & Update -->
 git add .
 git commit -m "new files and folders"
 git push
+
 
 
 
