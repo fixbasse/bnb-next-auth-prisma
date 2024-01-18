@@ -55,7 +55,7 @@ const SingleListing = ({
             setShowContent(!showContent);
         };
 
-    }, [dateRange, listing.price, showContent]);
+    }, [dateRange, listing.price]);
 
     const totalPriceBeforeTaxes = (priceBeforeTax + cleaningFee + serviceFee);
 
@@ -65,7 +65,7 @@ const SingleListing = ({
         }
 
         router.push(`/book/${listing.id}`)
-    }, [totalPriceBeforeTaxes, listing.id, router]);
+    }, [totalPriceBeforeTaxes]);
 
 
     return (
