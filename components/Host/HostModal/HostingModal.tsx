@@ -38,21 +38,21 @@ enum STEPS {
     THIRD_INTRO = 10,
     RESERVE_CONFIRM = 11,
     PRICE = 12,
-    CALENDER = 13,
+    // CALENDER = 13,
 };
 
-const initialDateRange = {
-    startDate: new Date(),
-    endDate: new Date(),
-    key: 'selection'
-};
+// const initialDateRange = {
+//     startDate: new Date(),
+//     endDate: new Date(),
+//     key: 'selection'
+// };
 
 //* MULTISTEP 
 const HostingModal = () => {
     const [steps, setSteps] = useState(STEPS.INTRO); // First STEPS
     const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(false);
-    const [dateRange, setDateRange] = useState<Range>(initialDateRange);
+   // const [dateRange, setDateRange] = useState<Range>(initialDateRange);
     const router = useRouter();
 
     // const [max, setMax] = useState(0);
@@ -137,7 +137,7 @@ const HostingModal = () => {
 
     //* <=========== Next & Create (onSubmit) ==============> 
     const onSubmit: SubmitHandler<FieldValues> = async (value) => {
-        if (steps !== STEPS.CALENDER) {
+        if (steps !== STEPS.PRICE) {
             return onNext();
         };
         setIsLoading(true);
@@ -146,8 +146,8 @@ const HostingModal = () => {
         try {
             const res = await axios.post('/api/listing', {
                 ...value,
-                startDate: dateRange.startDate,
-                endDate: dateRange.endDate,
+                // startDate: dateRange.startDate,
+                // endDate: dateRange.endDate,
             });
 
             console.log(res.data);
@@ -573,7 +573,7 @@ const HostingModal = () => {
             disabled={isLoading}
             disabled2={isLoading2}
             onAction={handleSubmit(onSubmit)}
-            onActionLabel={steps !== STEPS.CALENDER ? 'Next' : 'Create'}
+            onActionLabel={steps !== STEPS.PRICE ? 'Next' : 'Create'}
             secondaryAction={secondaryAction}
             secondaryActionLabel='Back'
 
