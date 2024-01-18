@@ -1,18 +1,18 @@
 'use client'
 
-import { useMemo, useState } from "react"
-import { useRouter } from "next/navigation"
+import { useEffect, useMemo, useState } from "react"
+import { redirect, useRouter } from "next/navigation"
 import dynamic from "next/dynamic"
 
 import LayoutHostModal from "./LayoutHostModal"
 import HostGuide from "./HostGuide"
-import HostCategory from "./HostCategory"
+import HostCategory, { categorySelected } from "./HostCategory"
 import HostRoomType from "./HostRoomType"
 import CountrySelect from "./CountrySelect"
 import Counter from "./Counter"
 
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form"
-import HostOffer from "./HostOffer"
+import HostOffer, { hostOffer } from "./HostOffer"
 import HostAmenities from "./HostAmenities"
 import Safety from "./Safety"
 import ImageUpload from "./ImageUpload"
@@ -22,6 +22,7 @@ import Calendar from "../../calendar/DateRange"
 import { Range } from 'react-date-range';
 import axios from "axios"
 import toast from "react-hot-toast"
+import { isAuthenticated } from "@/utils/Auth"
 
 enum STEPS {
     INTRO = 0,
@@ -200,12 +201,16 @@ const HostingModal = () => {
                 </h1>
 
                 <form className="categoryAnimate grid gap-4 grid-cols-2 md:grid-cols-3 py-4">
-                    <HostCategory
-                        onClick={(category) => {
-                            setCustomValues('category', category)
-                        }}
-                        isSelected={category}
-                    />
+                    {categorySelected.map((item) => (
+                        <HostCategory
+                            label={item.label}
+                            onClick={(category) => {
+                                setCustomValues('category', category)
+                            }}
+                            isSelected={category}
+                            icon={item.icon}
+                        />
+                    ))}
                 </form>
             </div>
         )
@@ -338,12 +343,16 @@ const HostingModal = () => {
                 </span>
 
                 <form className="grid gap-2 grid-cols-2 md:grid-cols-3 py-4">
-                    <HostOffer
-                        onClick={(offer) => {
-                            setCustomValues('offer', offer)
-                        }}
-                        isSelected={offer}
-                    />
+                    {hostOffer.map((item) => (
+                        <HostOffer
+                            label={item.label}
+                            onClick={(offer) => {
+                                setCustomValues('offer', offer)
+                            }}
+                            isSelected={offer}
+                            icon={item.icon}
+                        />
+                    ))}
                 </form>
 
                 <h1 className="font-semibold text-xl pt-8">

@@ -2,6 +2,7 @@ import { bedType } from '@/app/data/DummyData';
 import { Bed, DoorClosed, Dot } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react'
+import { IconType } from 'react-icons';
 import { GiNotebook, GiPoolDive } from 'react-icons/gi';
 import { IoIosStar } from 'react-icons/io';
 
@@ -30,7 +31,7 @@ const SingleLIstInfo = ({
     description,
     amenities,
     offer,
-    safety
+    safety,
 }: SingleListInfoProps) => {
     return (
         <div className='px-4 md:px-0'>

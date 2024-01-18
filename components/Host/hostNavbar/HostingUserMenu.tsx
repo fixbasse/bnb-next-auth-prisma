@@ -1,5 +1,6 @@
 
 import { signOut } from 'next-auth/react';
+import toast from 'react-hot-toast';
 import { RxAvatar } from 'react-icons/rx'
 
 interface HostingUserMenuProps {
@@ -11,6 +12,11 @@ const HostingUserMenu = ({
     showMenu,
     handleOpen
 }: HostingUserMenuProps) => {
+    const handleSignOut = () => {
+        signOut({ callbackUrl: 'http://localhost:3000' })
+        toast.success('You are SignOut!');
+    };
+
     return (
         <div>
             <div
@@ -77,7 +83,7 @@ const HostingUserMenu = ({
                         Switch to
                     </button>
                     <button
-                        onClick={() => signOut({ callbackUrl: 'http://localhost:3000' })}
+                        onClick={handleSignOut}
                         className="p-2 px-4 hover:bg-gray-50 w-full text-left">
                         Log out
                     </button>

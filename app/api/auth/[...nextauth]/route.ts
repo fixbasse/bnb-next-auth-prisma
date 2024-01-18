@@ -21,7 +21,8 @@ export const authOptions: AuthOptions = {
             name: 'Credentials',
             credentials: {
                 email: { label: 'email', type: 'text' },
-                password: { label: 'password', type: 'password' }
+                password: { label: 'password', type: 'password' },
+                
             },
             async authorize(credentials) {
                 if (!credentials?.email || !credentials?.password) {
@@ -61,31 +62,7 @@ export const authOptions: AuthOptions = {
     //     strategy: 'jwt'
     // },
     secret: process.env.NEXTAUTH_SECRET,
-    callbacks: {
-        session: ({ session, token }) => {
-            //console.log('Session Callback', session, token);
 
-            return {
-                ...session,
-                user: {
-                    ...session.user,
-                    id: token.id
-                }
-            };
-        },
-        jwt: ({ token, user }) => {
-            //console.log('JWT Callback', { token, user });
-
-            const u = user as unknown as any
-            if (user) {
-                return {
-                    ...token,
-                    id: u.id
-                }
-            }
-            return token;
-        }
-    },
 }
 
 const handler = NextAuth(authOptions);

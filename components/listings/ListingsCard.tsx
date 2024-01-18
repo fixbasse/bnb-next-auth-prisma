@@ -32,7 +32,7 @@ const ListingsCard = ({
         <div
             className="relative">
             <Link
-                href={`/listings/${id}`}
+                href={`/rooms/${id}`}
             >
                 <div
                     className="relative w-full h-[60dvh] md:h-[40dvh] cursor-pointer">

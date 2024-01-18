@@ -35,7 +35,7 @@ const RegisterModal = ({
 
     //* REGISTER ONSUBMIT 
     const onSubmit: SubmitHandler<Inputs> = async (value) => {
-        console.log(value);
+        //console.log(value);
         setIsLoading(true);
 
         try {
@@ -140,16 +140,16 @@ const RegisterModal = ({
                         </form>
 
                         {/* HORIZONTAL LINE */}
-                        <div className='flex items-center gap-2 py-4'>
+                        {/* <div className='flex items-center gap-2 py-4'>
                             <span className='line' />
                             <h6 className='text-gray-500 font-light'>
                                 or
                             </h6>
                             <span className='line' />
-                        </div>
+                        </div> */}
 
                         {/* SUBMIT WITH SOCIAL MEDIA */}
-                        <div className='flex flex-col gap-2'>
+                        {/* <div className='flex flex-col gap-2'>
                             <Button
                                 type='submit'
                                 disabled={isLoading}
@@ -174,7 +174,7 @@ const RegisterModal = ({
                                 title='Continue with Github'
                                 icon={AiFillGithub}
                             />
-                        </div>
+                        </div> */}
 
 
                     </section>

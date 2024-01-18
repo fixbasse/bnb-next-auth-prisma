@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import getCurrentUser from "../action/getCurrentUser"
+import Footer from "@/components/footer/Footer";
 
 
 export default async function RoomLayout({
@@ -16,6 +17,8 @@ export default async function RoomLayout({
             <div className="md:pt-[12rem]">
                 {children}
             </div>
+
+            <Footer />
         </div>
     )
 }

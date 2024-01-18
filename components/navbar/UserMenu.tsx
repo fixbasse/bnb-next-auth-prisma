@@ -33,7 +33,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 
     const onHost = () => {
         if (currentUser) {
-            return router.push(`/hosting/${currentUser.id}`)
+            return router.push(`/hosting`)
         };
 
         setShowModal(true);

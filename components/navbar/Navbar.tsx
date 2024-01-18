@@ -13,19 +13,21 @@ interface NavbarProps {
 
 const Navbar = ({ currentUser }: NavbarProps) => {
   const pathname = usePathname();
-  console.log(currentUser);
+  //console.log(currentUser);
 
   return (
     <nav className='border-b fixed w-full bg-white z-10'>
       <section className='px-4 md:px-[2rem] xl:px-[4rem] max-h-[90px] h-[90px] flex items-center justify-between'>
         <Logo />
-        <UserMenu
-          currentUser={currentUser}
-        />
+
+        {pathname === '/rooms'
+          ? null
+          : <UserMenu currentUser={currentUser} />
+        }
       </section>
 
       {/* SEARCH */}
-      {pathname === '/account-settings'
+      {pathname === '/rooms'
         ? null
         : <SearchBar />
       }

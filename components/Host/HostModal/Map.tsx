@@ -27,7 +27,7 @@ const Map = ({ center }: MapProps) => {
       center={center as L.LatLngExpression || [51, -0.09]}
       zoom={center ? 4 : 2}
       scrollWheelZoom={false}
-      className="h-[400px] rounded-lg"
+      className="h-[400px] rounded-lg z-0"
     >
       <TileLayer
         url={url}
