@@ -45,8 +45,8 @@ model Listing {
   price    Int
   hostName String
 
-  startDate DateTime
-  endDate   DateTime
+  startDate DateTime?
+  endDate   DateTime?
 
   createdAt DateTime @default(now())
 

@@ -76,9 +76,9 @@ const ListingsCard = ({
                 <span className="text-gray-500 font-light">
                     4,600 kilometers away
                 </span>
-                <span className="text-gray-500 font-light">
+                {/* <span className="text-gray-500 font-light">
                     {item.startDate.toDateString()} - {item.endDate.toDateString()}
-                </span>
+                </span> */}
 
                 {/* PRICE */}
                 <div className="flex items-center gap-1 pt-1">

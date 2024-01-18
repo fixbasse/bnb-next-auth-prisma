@@ -144,11 +144,7 @@ const HostingModal = () => {
         console.log(value);
 
         try {
-            const res = await axios.post('/api/listing', {
-                ...value,
-                // startDate: dateRange.startDate,
-                // endDate: dateRange.endDate,
-            });
+            const res = await axios.post('/api/listings', value);
 
             console.log(res.data);
             toast.success('Create listing success!');

@@ -27,8 +27,8 @@ export async function POST(req: Request) {
         description,
         confirm,
         price,
-        startDate,
-        endDate,
+        // startDate,
+        // endDate,
     } = body;
 
     try {
@@ -49,8 +49,8 @@ export async function POST(req: Request) {
                 description,
                 confirm,
                 price: parseInt(price, 10),
-                startDate,
-                endDate,
+                // startDate,
+                // endDate,
                 userId: currentUser.id,
                 hostName: currentUser.name,
             }
