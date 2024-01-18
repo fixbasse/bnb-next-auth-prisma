@@ -46,7 +46,7 @@ const ImageUpload = ({
                                         Drag your photos here
                                     </h2>
                                     <span className='font-light'>
-                                        Choose at least 3 photos
+                                        Choose 1 photo
                                     </span>
                                 </div>
 
