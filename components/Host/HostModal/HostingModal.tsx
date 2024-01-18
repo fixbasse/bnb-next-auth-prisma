@@ -55,12 +55,12 @@ const HostingModal = () => {
     const [dateRange, setDateRange] = useState<Range>(initialDateRange);
     const router = useRouter();
 
-    const [max, setMax] = useState(0);
+    // const [max, setMax] = useState(0);
 
-    const handleKeyPress = (e: any) => {
-        const count = e.target.value;
-        setMax(count.length);
-    };
+    // const handleKeyPress = (e: any) => {
+    //     const count = e.target.value;
+    //     setMax(count.length);
+    // };
 
 
     //* <===================================== REACT_HOOK_FORM
@@ -541,25 +541,25 @@ const HostingModal = () => {
     };
 
     //* STEP 14 CALENDER
-    if (steps === STEPS.CALENDER) {
-        bodyContent = (
-            <div>
-                <section className="pb-4">
-                    <h1 className="font-semibold text-3xl md:text-4xl pb-2">
-                        Set your date and create your listing.
-                    </h1>
-                    <span className="text-gray-500 text-xl font-light">
-                        You can change it anytime.
-                    </span>
-                </section>
+    // if (steps === STEPS.CALENDER) {
+    //     bodyContent = (
+    //         <div>
+    //             <section className="pb-4">
+    //                 <h1 className="font-semibold text-3xl md:text-4xl pb-2">
+    //                     Set your date and create your listing.
+    //                 </h1>
+    //                 <span className="text-gray-500 text-xl font-light">
+    //                     You can change it anytime.
+    //                 </span>
+    //             </section>
 
-                <Calendar
-                    value={dateRange}
-                    onChange={(value) => setDateRange(value.selection)}
-                />
-            </div>
-        )
-    };
+    //             <Calendar
+    //                 value={dateRange}
+    //                 onChange={(value) => setDateRange(value.selection)}
+    //             />
+    //         </div>
+    //     )
+    // };
 
 
 
